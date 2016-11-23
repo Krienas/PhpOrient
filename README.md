@@ -1,6 +1,7 @@
 # PhpOrient
 
 [![Build Status](https://travis-ci.org/Ostico/PhpOrient.svg?branch=master)](https://travis-ci.org/Ostico/PhpOrient) [![Coverage Status](https://coveralls.io/repos/Ostico/PhpOrient/badge.svg?branch=master)](https://coveralls.io/r/Ostico/PhpOrient)
+[![Dependency Status](https://www.versioneye.com/user/projects/5835d30b70dc390016dbca29/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/5835d30b70dc390016dbca29) [![Dependency Status](https://www.versioneye.com/user/projects/583573ade7cea00039353b6c/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/583573ade7cea00039353b6c)
 
 PHPOrient is a php driver based on the binary protocol of OrientDB.
 
