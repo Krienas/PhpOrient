@@ -2,7 +2,6 @@
 
 namespace PhpOrient\Protocols\Binary\Serialization;
 
-use PhpOrient\Configuration\Constants;
 use PhpOrient\Protocols\Binary\Abstracts\SerializableInterface;
 use PhpOrient\Protocols\Binary\Data\Bag;
 use PhpOrient\Protocols\Binary\Data\ID;
@@ -111,7 +110,7 @@ class CSV {
     protected static function eatKey( $input ) {
         $length    = strlen( $input );
         $collected = '';
-        if ( $input[ 0 ] === '"' ) {
+        if ( @$input[ 0 ] === '"' ) {
             $result = self::eatString( substr( $input, 1 ) );
 
             return [ $result[ 0 ], substr( $result[ 1 ], 1 ) ];
@@ -226,7 +225,7 @@ class CSV {
 
         $input = substr( $input, $i );
 
-        $c = $input[ 0 ];
+        $c = @$input[ 0 ];
 
         $useStrings = ( PHP_INT_SIZE == 4 );
 
@@ -297,7 +296,6 @@ class CSV {
      * @return array The collected array and any remaining content.
      */
     protected static function eatArray( $input ) {
-        $length  = strlen( $input );
         $array   = [ ];
         $cluster = null;
         while ( strlen( $input ) ) {

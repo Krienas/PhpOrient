@@ -130,7 +130,7 @@
     </storages>
     <users>
         <user resources="*" password="root" name="root"/>
-        <!-- user resources="*" password="admin" name="admin"/ -->
+        <!-- <user resources="*" password="admin" name="admin"/> -->
         <user resources="connect,server.listDatabases,server.dblist" password="guest" name="guest"/>
     </users>
     <properties>
